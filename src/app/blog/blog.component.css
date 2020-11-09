@@ -1,33 +1,46 @@
 .bod {
-    background-color: #76c7b1;
-}
-
-.cont {
-    background-color: #76c7b1;
+    background-image: linear-gradient(to top left, #15645e, #b1bcbe, #abaeaf, #a6b5c2, #3b5b63, #53696d, #698080, #15645e);
     flex-wrap: wrap;
     display: flex;
-    padding: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+   
+}
+
+.primerCuadro {
+    width: 12%;
+    height: 70px;
+    border: 3px solid rgb(204, 197, 197);
+    position: relative;
+    top: 40px;
+    margin-bottom: 75px;
+}
+
+.primerCuadro:hover{
+    transform: rotateZ(10deg);
+    transition: 1s;
 }
 
 
 .sel {
     position: relative;
     display: inline-block;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     width: 100%;
-    margin-top: 20px;
-    margin-left: 30px;
+    margin-left: 10px;
+    margin-top: 3px;
 }  
   
 .sel select {
     display: inline-block;
-    width: 10%;
+    width: 100%;
     cursor: pointer;
-    padding: 15px 5px;
+    font-size: 13px;
+    padding: 15px 2px;
     outline: 0;
-    border: 2px solid #3f9eab;
+    border: 2px solid #140509;
     border-radius: 3px;
-    background: #807b7b;
+    background: #5f5d5d;
     color: #f6f6f6;
     appearance: none;
     -webkit-appearance: none;
@@ -42,6 +55,8 @@
 .sel select:hover/* , .sel select:focus */ {
     color: black;
     background: rgb(238, 224, 224);
+    transform: rotateZ(-10deg);
+    transition: 1s;
 }
 
 
@@ -70,21 +85,55 @@
 
 
 
-.unPost {
-    background-color: rgb(238, 224, 224);
+.unPost{
+    background-color: rgb(241, 237, 237);
     color: rgb(39, 38, 38);
     border: 0.5px solid rgb(231, 229, 229);
-    border-radius: 3px;
-    width: 48%;
-    padding: 20px;
-    margin: 10px;
+    border-radius: 1px;
+    width: 95%;
+    margin: 15px;
     box-shadow: 8px 8px 8px rgba(93, 93, 94, 0.3);
     opacity: 0.95;
 }
 
-.unPost img {
-    width: 250px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    opacity: 1;
+.tit {
+    width: 101.8%;
+    background-color: rgb(51, 42, 42);
+    color: white;
+    padding: 7px;
+    margin-left: -8px;
+    margin-top: -1px;
+    border: 1px solid rgb(23, 49, 48);
+    box-shadow: 3px 3px rgb(51, 112, 107);
 }
+
+.tit h5 {
+    margin-top: 7px;
+    margin-left: 15px;
+    font-size: 16px;
+}
+
+ .bodai {
+    background-color: rgb(241, 237, 237);
+    color: rgb(39, 38, 38);
+    width: 100%;
+    opacity: 0.95;
+    padding: 25px;
+}
+
+.bod img {
+    width: 250px;
+    opacity: 1;
+    padding: 10px;
+    margin-left: 15px;
+}
+
+.unPost p {
+    padding: 20px;
+    font-size: 17px;
+}
+
+.unPost h6, small {
+    margin-left: 20px;
+}
+

@@ -31,7 +31,8 @@ export class FormularioComponent implements OnInit {
       ]),
       categoria: new FormControl('', [
         Validators.required
-      ])
+      ]),
+      esconder: new FormControl('true')
 
     })
 
@@ -44,7 +45,7 @@ export class FormularioComponent implements OnInit {
 
   onSubmit() {
     this.postService.agregarPost(this.formulario.value);
-    this.alerta = true;
+    this.alerta = !this.alerta;
     this.formulario.reset();
 
   }

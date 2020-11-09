@@ -3,8 +3,9 @@ button{
 }
 
 .all {
-    background-color:#76c7b1;
+    background-image: linear-gradient(to top left, #15645e, #b1bcbe, #abaeaf, #a6b5c2, #3b5b63, #53696d, #698080, #15645e);
     flex-wrap: wrap;
+    padding: 20px;
 }
 
 form {
