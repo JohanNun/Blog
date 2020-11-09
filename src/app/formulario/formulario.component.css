@@ -1,0 +1,23 @@
+button{
+    margin-left: 5px;
+}
+
+.all {
+    background-color:#76c7b1;
+    flex-wrap: wrap;
+}
+
+form {
+    display: flex;
+}
+
+.aalert {
+    width: 350px;
+    height: 100px;
+    margin-left: -250px;
+    margin-top: 100px;
+}
+
+input, textarea, select {
+    background-color: rgb(250, 248, 248);
+}

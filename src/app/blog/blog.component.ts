@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Post, PostService } from '../post.service';
 
 @Component({
   selector: 'app-blog',
@@ -7,9 +8,41 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
 
-  constructor() { }
+  todosLosPosts: Post[];
+  lasCategorias: string[];
 
-  ngOnInit(): void {
+  constructor(private postService: PostService) { }
+
+  async ngOnInit() {
+
+    await this.postService.getCategorias()
+      .then(response => {
+        this.lasCategorias = response
+      })
+      .catch(error => console.log(error)
+      )
+
+
+    await this.postService.getAllPost()
+      .then(response => this.todosLosPosts = response)
+      .catch(error => console.log(error)
+      )
+
+
   }
+
+
+  async filtrarCategorias($event) {
+    const all = await this.postService.getAllPost();
+    const arrFiltrado = await this.postService.getPostByCategory($event.target.value)
+
+    if ($event.target.value === 'all') {
+      return this.todosLosPosts = all;
+    } else {
+      return this.todosLosPosts = arrFiltrado;
+    }
+
+  }
+
 
 }

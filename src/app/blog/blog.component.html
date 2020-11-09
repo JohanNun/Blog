@@ -1,1 +1,27 @@
-<p>blog works!</p>
+<div class="bod">
+
+    <div class="sel">
+        <select class="btn" (change)="filtrarCategorias($event)">
+            <option selected disabled>Select category</option>
+            <option value="all">All</option>
+            <option *ngFor="let cat of lasCategorias">{{ cat }}</option>
+        </select>
+    </div>
+
+
+    <div class="cont">
+
+        <div class="unPost" *ngFor="let post of todosLosPosts">
+            <h5>{{ post.titulo }}</h5>
+            <img src="{{post.imagen}}">
+            <p>{{ post.texto }}</p>
+            <h6>Author: {{ post.autor}}</h6>
+            <small> {{ post.fecha }} - Category: {{ post.categoria }}</small>
+
+        </div>
+
+    </div>
+</div>
+
+
+<!-- | date: 'dd/MM/yyyy' -->

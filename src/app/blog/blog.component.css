@@ -1,0 +1,90 @@
+.bod {
+    background-color: #76c7b1;
+}
+
+.cont {
+    background-color: #76c7b1;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 20px;
+}
+
+
+.sel {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 30px;
+}  
+  
+.sel select {
+    display: inline-block;
+    width: 10%;
+    cursor: pointer;
+    padding: 15px 5px;
+    outline: 0;
+    border: 2px solid #3f9eab;
+    border-radius: 3px;
+    background: #807b7b;
+    color: #f6f6f6;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    }
+
+.sel select::-ms-expand {
+    display: none;
+}
+
+        
+.sel select:hover/* , .sel select:focus */ {
+    color: black;
+    background: rgb(238, 224, 224);
+}
+
+
+.sel_arrow {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    width: 0px;
+    height: 0px;
+    border: 1px solid #38ada9;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.sel select:hover ~ .select_arrow,
+.sel select:focus ~ .select_arrow {
+    border-color:  #38ada9;
+}
+.sel select:disabled ~ .sel_arrow {
+    border-top-color: rgb(207, 204, 204);
+}
+
+
+
+
+.unPost {
+    background-color: rgb(238, 224, 224);
+    color: rgb(39, 38, 38);
+    border: 0.5px solid rgb(231, 229, 229);
+    border-radius: 3px;
+    width: 48%;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 8px 8px 8px rgba(93, 93, 94, 0.3);
+    opacity: 0.95;
+}
+
+.unPost img {
+    width: 250px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    opacity: 1;
+}
