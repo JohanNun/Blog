@@ -1,10 +1,15 @@
+.contenido{
+   height: 100vh;
+   background-image: linear-gradient(to top left, #15645e, #b1bcbe, #abaeaf, #a6b5c2, #3b5b63, #53696d, #698080, #15645e);
+}
+
 .bod {
-    background-image: linear-gradient(to top left, #15645e, #b1bcbe, #abaeaf, #a6b5c2, #3b5b63, #53696d, #698080, #15645e);
+    /* background-image: linear-gradient(to top left, #15645e, #b1bcbe, #abaeaf, #a6b5c2, #3b5b63, #53696d, #698080, #15645e); */
     flex-wrap: wrap;
     display: flex;
     padding-left: 100px;
     padding-right: 100px;
-   
+    padding-bottom: 20px;
 }
 
 .primerCuadro {
@@ -53,8 +58,8 @@
 
         
 .sel select:hover/* , .sel select:focus */ {
-    color: black;
-    background: rgb(238, 224, 224);
+    /* color: black;
+    background: rgb(238, 224, 224); */
     transform: rotateZ(-10deg);
     transition: 1s;
 }

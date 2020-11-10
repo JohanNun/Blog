@@ -66,20 +66,7 @@ export class PostService {
 
   getCategorias(): Promise<string[]> {
 
-    const categoriasSinRepetir: string[] = this.arrayDePost.map(catego => {
-      return catego.categoria
-    })
-    const sin = [...new Set(categoriasSinRepetir)]
-
-    if (localStorage.getItem('losPosts') === null) {
-      return Promise.resolve(sin);
-    } else {
-      const nuevoArr: Post[] = JSON.parse(localStorage.getItem('losPosts'));
-      const arrSinRepetir: Post[] = [... new Set(nuevoArr)];
-      return Promise.resolve(arrSinRepetir.map(categor => {
-        return categor.categoria
-      }))
-    }
+    return Promise.resolve([... new Set(this.arrayDePost.map(post => post.categoria))]);
 
   }
 
