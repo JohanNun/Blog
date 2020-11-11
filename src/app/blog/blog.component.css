@@ -1,10 +1,9 @@
 .contenido{
-   height: 100vh;
    background-image: linear-gradient(to top left, #15645e, #b1bcbe, #abaeaf, #a6b5c2, #3b5b63, #53696d, #698080, #15645e);
+   min-height: 100vh;
 }
 
 .bod {
-    /* background-image: linear-gradient(to top left, #15645e, #b1bcbe, #abaeaf, #a6b5c2, #3b5b63, #53696d, #698080, #15645e); */
     flex-wrap: wrap;
     display: flex;
     padding-left: 100px;

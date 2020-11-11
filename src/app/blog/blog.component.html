@@ -12,16 +12,17 @@
         </div>
 
 
-        <div class="unPost" *ngFor="let post of todosLosPosts" (click)="post.esconder = !post.esconder">
+        <div class="unPost" *ngFor="let post of todosLosPosts; let indice=index">
             <div class="tit d-flex justify-content-between">
                 <h5>{{ post.titulo }}</h5>
-                <button class="btn btn-outline-light">Display</button>
+                <button class="btn btn-outline-light" (click)="post.esconder = !post.esconder">Display</button>
             </div>
             <div class="bodai" [hidden]="post.esconder">
                 <img src="{{post.imagen}}">
                 <p>{{ post.texto }}</p>
                 <h6>Author: {{ post.autor}}</h6>
                 <small> {{ post.fecha }} - Category: {{ post.categoria }}</small>
+                <button class="btn btn-danger float-right" (click)="onBorrar(indice)">Delete</button>
             </div>
         </div>
 

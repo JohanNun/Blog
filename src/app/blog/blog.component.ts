@@ -23,6 +23,7 @@ export class BlogComponent implements OnInit {
       )
 
 
+
     await this.postService.getAllPost()
       .then(response => this.todosLosPosts = response)
       .catch(error => console.log(error)
@@ -34,7 +35,7 @@ export class BlogComponent implements OnInit {
 
   async filtrarCategorias($event) {
     const all = await this.postService.getAllPost();
-    const arrFiltrado = await this.postService.getPostByCategory($event.target.value)
+    const arrFiltrado = await this.postService.getPostByCategory($event.target.value);
 
     if ($event.target.value === 'all') {
       return this.todosLosPosts = all;
@@ -42,6 +43,11 @@ export class BlogComponent implements OnInit {
       return this.todosLosPosts = arrFiltrado;
     }
 
+  }
+
+
+  onBorrar(pIndice) {
+    this.postService.deletePost(pIndice);
   }
 
 

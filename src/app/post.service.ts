@@ -20,7 +20,7 @@ export class PostService {
   arrayDePost: Post[];
 
 
-  constructor(private httpClient: HttpClient) {
+  constructor() {
     this.arrayDePost = [
 
       { titulo: "Album Review: Lords of Black - Alchemy of Souls", texto: "In May 2018, when we reviewed the previous Lords of Black album,  we were rather stunned by the impressive showing of this upstart renegade Chilean-Spaniard metal project. These days, vocalist Ronnie Romero is a bit more of a household name in the metal world, but when he was the fresh face of Ritchie Blackmore’s Rainbow, and exploded onto the scene, he really turned our heads at Sonic Perspectives, as well as the heads at Frontiers Records. While Ronnie is busy vying with the formidable Dino Jelusick for title of best new metal voice, the heavy lifting for the Lords of Black is being done by metal guitar mastermind Tony Hernando. Dani Criado returns with his solid bass guitar chops, and Andi Cobos has been replaced by Johan Nunez on the drums. While we will miss the creative drum fills provided by Andi on the previous record, let’s face it; Jo Nunez is an absolute beast on the newer Firewind albums, and is not wasted here. When all is said and done, how does “Alchemy” stack up to previous Lords of Black albums, and against progressive melodic metal at large? While it lacks a few cool tricks from the previous “Icons of the New Days” album, it also has some new techniques, keeping it fresh and relevant. As a whole, it’s every bit the equal with “Icons,” putting it comfortably into the top rankings of today’s metal scene. This one lands on November 6, and there are some cool pre-order packages at their website . Be sure to check it out.", autor: "John Kokel", imagen: "https://www.velvetthunder.co.uk/wp-content/uploads/2020/09/Lords-Of-Black_Alchemy-Of-Souls-Pt1-e1600214238149.jpg", fecha: '27-10-2020', categoria: "Music", esconder: true },
@@ -48,8 +48,17 @@ export class PostService {
       localStorage.setItem('losPosts', JSON.stringify(this.arrayDePost))
     }
 
+  }
 
 
+  deletePost(pPost: any) {
+    if (localStorage.getItem('losPosts') === null) {
+      this.arrayDePost.splice(pPost, 1);
+    } else {
+      this.arrayDePost = JSON.parse(localStorage.getItem('losPosts'));
+      this.arrayDePost.splice(pPost, 1);
+      /* localStorage.setItem('losPosts', JSON.stringify(this.arrayDePost)) */
+    }
   }
 
 
@@ -82,4 +91,6 @@ export class PostService {
       resolve(arrFiltrado);
     })
   }
+
+
 }
