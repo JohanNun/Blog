@@ -12,11 +12,11 @@
 }
 
 .primerCuadro {
-    width: 12%;
-    height: 70px;
+    width: 100px;
+    height: 63px;
     border: 3px solid rgb(204, 197, 197);
     position: relative;
-    top: 40px;
+    top: 45px;
     margin-bottom: 75px;
 }
 
@@ -27,12 +27,12 @@
 
 
 .sel {
-    position: relative;
-    display: inline-block;
+    position: absolute;
+    /* display: inline-block; */
     margin-bottom: 20px;
-    width: 100%;
-    margin-left: 10px;
-    margin-top: 3px;
+    width: 100px;
+    margin-left: 5px;
+    
 }  
   
 .sel select {

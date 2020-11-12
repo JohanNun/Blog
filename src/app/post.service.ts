@@ -51,13 +51,12 @@ export class PostService {
   }
 
 
-  deletePost(pPost: any) {
+  deletePost(pPost: any): Promise<any[]> {
     if (localStorage.getItem('losPosts') === null) {
-      this.arrayDePost.splice(pPost, 1);
+      return Promise.resolve(this.arrayDePost.splice(pPost, 1));
     } else {
-      this.arrayDePost = JSON.parse(localStorage.getItem('losPosts'));
       this.arrayDePost.splice(pPost, 1);
-      /* localStorage.setItem('losPosts', JSON.stringify(this.arrayDePost)) */
+      localStorage.removeItem('losPosts');
     }
   }
 
